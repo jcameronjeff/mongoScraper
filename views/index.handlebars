@@ -1,1 +1,88 @@
-<h1>Mongo Scraper</h1>
+<header>
+  {{> _navbar}}
+
+    <!-- Intro Section -->
+      <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://images.pexels.com/photos/265728/pexels-photo-265728.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);">
+        <div class="full-bg-img">
+          <div class="mask rgba-black-light">
+            <div class="container flex-center">
+                <div class="row pt-5 mt-3">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Web Scraper </strong></h1>
+                            <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
+                            <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Enter Your Search</strong></h5>
+                            <div class="md-form form-lg">
+                              <input type="text" id="inputLGEx" class="form-control form-control-lg">
+                              <label for="inputLGEx">Search Articles</label>
+                              <button class="btn purple-gradient btn-lg" id="searchSubmit">Search</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</header>
+
+<div class="container">
+
+    <!--Section: Blog v.3-->
+    <section class="section extra-margins pb-3 text-center text-lg-left wow fadeIn" data-wow-delay="0.3s">
+
+      <!--Section heading-->
+      <h2 class="section-heading h1 pt-5">Browse Dresses</h2>
+      <!--Section description-->
+      <p class="section-description mb-5 pb-3">Click > to save for later!</p>
+
+    <div class = "row" id="articles">
+    </div>
+
+
+
+
+    </section>
+
+
+
+        <!--Grid row-->
+        {{!-- <div class="row">
+
+            <!--Grid column-->
+            <div class="col-lg-4 mb-4">
+                <!--Featured image-->
+                <div class="view overlay z-depth-1">
+                    <img src="https://mdbootstrap.com/img/Photos/Others/img (38).jpg" class="img-fluid" alt="First sample image">
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-7 mb-4">
+                <!--Excerpt-->
+                <a href="" class="teal-text"><h6 class="pb-1"><i class="fa fa-heart"></i><strong> Lifestyle </strong></h6></a>
+                <h4 class="mb-4"><strong>This is title of the news</strong></h4>
+                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor.</p>
+                <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p>
+                <a class="btn btn-primary">Save</a>
+            </div>
+            <!--Grid column-->
+
+        </div>
+      </div> --}}
+        {{!-- <div class="container">
+              <!--Section: Tabs-->
+              <section>
+                  <!-- Tab panels -->
+                  <div class="tab-content row">
+                      {{#each savedSearch}} {{> savedsearches}} {{/each}}
+                  </div>
+              </section>
+              <!--Section: Tabs-->
+          </div> --}}
+                <!--Grid row-->

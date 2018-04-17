@@ -2,29 +2,75 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	  <link href="assets/css/mdbootstrap_css/bootstrap.css" rel="stylesheet" type="text/css">
-		<title>Node Mongo & Cheerio Web Scraper</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Node Mongo & Cheerio Web Scraper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/CSS/mdbootstrap_css/bootstrap.min.css" rel="stylesheet">
+	  <link href="assets/css/mdbootstrap_css/mdb.css" rel="stylesheet" type="text/css">
 
+
+    <style>
+
+      .top-nav-collapse {
+          background-color: #6f7782 !important;
+      }
+      .navbar:not(.top-nav-collapse) {
+          background: transparent !important;
+      }
+      @media (max-width: 768px) {
+          .navbar:not(.top-nav-collapse) {
+              background: #6f7782 !important;
+          }
+      }
+      h1 {
+          letter-spacing: 8px;
+      }
+      h5 {
+          letter-spacing: 3px;
+      }
+      .hr-light {
+          border-top: 3px solid #fff;
+          width: 80px;
+      }
+      footer.page-footer {
+          background-color: #6f7782;
+      }
+      @media (max-width: 450px) {
+          .btn-floating {
+              margin-left: 0;
+              margin-right: 0;
+          }
+      }
+			.intro-2 {
+					background: url("http://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img%20(11).jpg")no-repeat center center;
+					background-size: cover;
+			}
+			.card {
+					background-color: rgba(229, 228, 255, 0.2);
+			}
+			.md-form label {
+					color: #ffffff;
+			}
+			h6 {
+					line-height: 1.7;
+			}
+  </style>
 	</head>
-	<body>
-		{{{ body }}}
 
+	<body>
+
+		{{{ body }}}
+  <script type="text/javascript" src="assets/js/mdbootstrap/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="assets/js/mdbootstrap/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="assets/js/mdbootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/mdbootstrap/mdb.min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
     <script>
        new WOW().init();
 
-       function initialize() {
-           var options = {
-               types: ['(cities)'],
-               componentRestrictions: { country: "us" }
-           };
-           var input = document.getElementById('orangeForm-city');
-           var autocomplete = new google.maps.places.Autocomplete(input, options);
-       }
+
 
    </script>
 
