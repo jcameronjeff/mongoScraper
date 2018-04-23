@@ -1,6 +1,10 @@
 <header>
   {{> _navbar}}
-
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
     <!-- Intro Section -->
       <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2848%29.jpg);">
         <div class="full-bg-img">
@@ -14,25 +18,35 @@
                               <!--Header-->
 
                               <!--Body-->
+                            <form method="post" action="/users/register">
                               <div class="md-form">
                                   <i class="fa fa-user prefix white-text"></i>
-                                  <input type="text" id="orangeForm-name" class="form-control">
-                                  <label for="orangeForm-name">Your name</label>
+                                  <input type="text" id="signupFrom-name" class="form-control" name="name">
+                                  <label for="signup-name">Your name</label>
+                              </div>
+                              <div class="md-form">
+                                  <i class="fa fa-lock prefix white-text"></i>
+                                  <input type="password" id="signupForm-pass" class="form-control" placeholder="Username" name="username">
+                                  <label for="signup-pass">Username</label>
                               </div>
                               <div class="md-form">
                                   <i class="fa fa-envelope prefix white-text"></i>
-                                  <input type="text" id="orangeForm-email" class="form-control">
-                                  <label for="orangeForm-email">Your email</label>
+                                  <input type="text" id="signupForm-email" class="form-control" name="email">
+                                  <label for="signup-email">Your email</label>
                               </div>
 
                               <div class="md-form">
                                   <i class="fa fa-lock prefix white-text"></i>
-                                  <input type="password" id="orangeForm-pass" class="form-control">
-                                  <label for="orangeForm-pass">Your password</label>
+                                  <input type="password" id="signupForm-pass" class="form-control" placeholder="Password" name="password">
+                                  <label for="signup-pass">Your password</label>
                               </div>
-
+                              <div class="form-group">
+                                <i class="fa fa-lock prefix white-text"></i>
+                                <input type="password" id="signupForm-pass" class="form-control" placeholder="Password" name="password2">
+                                <label for="signup-pass">Your password</label>
+                              </div>
                               <div class="text-center">
-                                  <button class="btn purple-gradient btn-lg">Sign up</button>
+                                  <button type="submit" class="btn indigo-gradient btn-lg">Sign up</button>
                                   <hr>
                                   <div class="inline-ul text-center d-flex justify-content-center">
                                       <a class="p-2 m-2 fa-lg tw-ic"><i class="fa fa-twitter white-text"></i></a>
@@ -43,6 +57,7 @@
 
                           </div>
                       </div>
+                    </form>
                       <!--/Form with header-->
 
 

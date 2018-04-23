@@ -5,7 +5,11 @@ const cheerio = require("cheerio");
 const request = require('request');
 const axios = require('axios');
 const db = require("../../models");
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+var expressValidator = require('express-validator');
 
+var User = require('../../models/user');
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/scraperDB';
 
 mongoose.Promise = Promise;
@@ -56,6 +60,7 @@ router.get("/scrape", function(req, res) {
 
 router.get("/saved", function(req, res) {
 
+
   db.Article.find({'saved': true}).then(function(data) {
       console.log(data);
       var articleObj = {
@@ -97,5 +102,26 @@ router.post('/save/:id', function(req, res) {
     res.send('Dress Saved');
   });
 });
+
+
+router.post('/createUser/', function(req, res) {
+
+  var id = req.params.id;
+  console.log(id);
+  db.Article.findByIdAndUpdate(id,{
+      saved: true
+  }).then(function(data){
+    res.send('Dress Saved');
+  });
+});
+
+
+router.get('/signup', (req, res) => {
+  console.log(req.name);
+  res.render('signup')
+});
+
+// Login
+
 
 module.exports = router;
