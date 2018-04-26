@@ -2,8 +2,8 @@
   {{> _navbar}}
 
     <!-- Intro Section -->
-      <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://images.pexels.com/photos/265728/pexels-photo-265728.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);">
-        <div class="full-bg-img">
+      <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(https://images.pexels.com/photos/265728/pexels-photo-265728.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260); height:100vh " >
+        <div class="full-bg-img" style="height:100vh'>
           <div class="mask rgba-black-light">
             <div class="container flex-center">
                 <div class="row pt-5 mt-3">
@@ -14,7 +14,7 @@
                             <h5 class="text-uppercase mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>A full stack web scrape built with NodeJS, Express, MongoDB, Cheerio, and Axios</strong></h5>
                             <p class="white-text wow fadeInDown">Context: As I was looking in to building a web-scraping app, my fiance was sitting next to me browsing dresses. I figured I'd take the opportunity to build something she could use to store her favorites.</p>
                             <div class="md-form form-lg">
-                              <button class="btn purple-gradient btn-lg" id="searchSubmit">View Dresses</button>
+                              <button class="btn purple-gradient btn-lg " id="searchSubmit">View Dresses</button>
                           </div>
                         </div>
                     </div>
@@ -26,15 +26,15 @@
 
 </header>
 <main>
-<div class="container">
+
 
     <!--Section: Blog v.3-->
-    <section class="section extra-margins pb-3 text-center text-lg-left wow fadeIn" data-wow-delay="0.3s">
+    <section id="dressView" class="section extra-margins pb-3 text-center text-lg-left wow fadeIn" data-wow-delay="0.3s">
 
       <!--Section heading-->
       <h2 class="section-heading h1 pt-5">Browse Dresses</h2>
       <!--Section description-->
-      <p class="section-description mb-5 pb-3">Click > to save for later!</p>
+      <p class="section-description mb-5 pb-3">Click  <a class='btn-floating btn-action ml-2  mr-2 mdb-color lighten-3 waves-effect waves-light right delete-dress'><i class='fa fa-chevron-right pl-1'></i></a>to save for later!</p>
 
     </section>
     <section>
@@ -42,6 +42,31 @@
         <div class= "row">
           <div class= "card-columns" id ='articles'>
 
+                {{#if article}}
+            {{#each article}}
+
+              <div class="card mb-4 data-wow-delay="0.3s">
+                  <div class="view overlay">
+                    <a><img src="{{this.link}}" class='img-fluid dress-preview' 'alt='dress' /></a></div>
+                    <div class='mask rgba-white-slight waves-effect waves-light'>
+                    <a class='btn-floating btn-action ml-auto mr-4 mdb-color lighten-3 waves-effect waves-light right delete-dress' data-id="{{this._id}}">
+                    <i class='fa fa-chevron-right pl-1'></i></a>
+                    <div class='card-body'>
+                    <h4 class='card-title'>"{{this.style}}"</h4>
+                    <hr>
+                    <p class='font-small grey-dark-text mb-0'>"{{this.details}}"</p>
+                    </div>
+                  </div>
+                </div>
+
+
+            {{/each}}
+
+            {{else}}
+              <div class="container">
+              
+              </div>
+          {{/if}}
 
 
           </div>
