@@ -23,7 +23,7 @@ app.use(express.static("public"));
 app.use('/details/', express.static(__dirname + '/public'));
 app.use('/signup/', express.static(__dirname + '/public'));
 app.use('/register/', express.static(__dirname + '/public'));
-
+app.use('/', express.static(__dirname + '/public'));
 
 app.engine('handlebars', exphbs({
     extname:'handlebars',
