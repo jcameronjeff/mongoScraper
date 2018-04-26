@@ -12,10 +12,15 @@ var expressValidator = require('express-validator');
 var User = require('../../models/user');
 
 
+router.use(express.static("public"));
 
+router.use('/details/', express.static(__dirname + '/public'));
+router.use('/signup/', express.static(__dirname + '/public'));
+router.use('/register/', express.static(__dirname + '/public'));
+router.use('/', express.static(__dirname + '/public'));
 
 mongoose.Promise = Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://jefe:Brain1304@ds259119.mlab.com:59119/heroku_0hjjrjjv', {useMongoClient: true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://jefe:Brain1304@ds259119.mlab.com:59119/heroku_0hjjrjjv');
 
 
 router.get("/", function(req, res) {
